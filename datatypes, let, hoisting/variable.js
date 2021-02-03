@@ -1,6 +1,6 @@
 'use strict';
 
-//2. Variable
+//2. Variable (rw read/write)
 //let (added in ES6)
 let globalName = 'global name';
 {
@@ -14,7 +14,7 @@ console.log(globalName);
 //var hoisting (move declaration from bottom to top)
 //has no block scope
 
-// 3. Constants
+// 3. Constants (r read only)
 // favor immutable data type always for a few reasons:
 // - security
 // - thread safety
@@ -22,9 +22,17 @@ console.log(globalName);
 const daysInWeek = 7;
 const maxNumber = 5;
 
+//note!
+//Immutable data types : primitive types, frozen objects
+//Mutable data types : all objects by default are mutable
+//favor immutable data type always for a few reasons:
+//-security
+//-thread safety
+//-reduce human mistakes
+
 // 4. Variable types
-// primitive, single item : number, string, boolean, null, undefined, symbol
-// object, box container
+// primitive(값이 메모리에 저장), single item : number, string, boolean, null, undefined, symbol
+// object(값을 가리키는 ref가 메모리에 저장), box container
 // function, first-class function
 const count = 17;
 const size = 17.1;
